@@ -1,0 +1,33 @@
+@import "mixins";
+@import "header";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    @include scroll;
+    color: $dark;
+
+    a{
+    text-decoration: none;
+
+}
+li{
+    list-style: none;
+}
+ol{
+    list-style: none;
+}
+img{
+    width: 100%;
+}
+}
+
+
+
+
+
+//  scroll personalizado
+
+
+// end scroll

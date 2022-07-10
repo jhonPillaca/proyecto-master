@@ -1,0 +1,122 @@
+<style>
+    .td-cursos {
+        top: 0 !important;
+        justify-content: center;
+        flex-direction: column;
+        align-items: initial !important;
+    }
+
+    .td-cursos .header_catg{
+        position:fixed;
+        top: 70px;
+        z-index: 1;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        grid-auto-rows: auto;
+        gap: 20px;
+        position: relative;
+        top: 30px;
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        margin-top: 5rem;
+    }
+
+    .wrapper .card {
+        display: flex;
+        flex-direction: column;
+        background: #1A2D4D;
+        gap: 1rem;
+        border-radius: 10px;
+        transition: all 0.5s;
+        margin: 0 10px;
+        margin-bottom: 3rem;
+    }
+
+    .wrapper .card:hover{
+        background: #F50F57;
+    transform: scaleY(1.1);
+    }
+
+    .card figure img{
+        border-radius: 10px;
+    height: 150px;
+    }
+    .card .description{
+        display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    gap: 1rem;
+    margin: 0 10px;
+    color: #ffff;
+    }
+    .description span:first-child{
+        padding: 5px;
+    background: #4D75B8;
+    border-radius: 5px;
+    }
+    .description h4{
+        margin-left: 5px;
+    text-align: left;
+    }
+    .description .detalle{
+        display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    width: 100%;
+    }
+    .detalle p{
+        text-align: left;
+    word-spacing: 2px;
+    }
+    .detalle p span{
+        padding: 0 15px;
+    }
+    .detalle .group_button{
+        display: flex;
+    flex-direction: row;
+    gap: 0.6rem;
+    justify-content: space-between;
+    justify-items: center;
+    color: #ffff;
+    margin-bottom: 10px;
+    }
+    .group_button button{
+        border: none;
+    border-radius: 5px;
+    background: #F50F57;
+    padding: 5px;
+    color: #ffff;
+    cursor: pointer;
+    text-align: center;
+    width: 80%;
+    }
+    .wrapper .card:hover .description span:first-child{
+        background: #00000099;
+    }
+    .wrapper .card:hover .group_button button{
+        background: #1A2D4D;
+    }
+
+    .group_button span{
+    background: transparent;
+    border: 1px solid #ffff;
+    border-radius: 5px;
+    padding: 5px;
+    width: calc(100% - 80%);
+    cursor: pointer;
+    }
+</style>
+
+<section class="td-cursos">
+    
+    <div class="header_catg">
+        <h2>Cursos Sirius disponibles</h2>
+    </div>
+    
+    <app-cursos></app-cursos>
+
+</section>

@@ -8,10 +8,13 @@ a {
 }
 
 header {
-    background: $primary;
-    width: 100%;
-    height: 100vh;
-    border-radius: 0 0 30px 30px;
+    position: relative;
+    display: flex;
+
+    // background: $primary;
+    // width: 100%;
+    // height: 100vh;
+    // border-radius: 0 0 30px 30px;
 
     nav {
         width: 100%;
@@ -52,7 +55,7 @@ header {
                 span {
                     color: $white;
                     font-size: 25px;
-                    border-bottom: 3px solid $secondary;
+                    border-bottom: 3px solid $seccondary;
                 }
             }
 
@@ -78,8 +81,19 @@ header {
 
                     &.bg-scroll {
                         // background: $scroll;
-                        background: linear-gradient(151.8deg, #0e1a2f 25.79%, #f50f57 102.69%);
+                        top:42px;
+                        background: linear-gradient(111deg, #0e1a2f 1.79%, #f50f57 102.69%);
                         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+                    }
+                    li{
+                        padding: 5px;
+                        border-radius: 5px;
+                        a{
+                            color: $white;
+                        }
+                        &:hover{
+                            background: $gb_hover;
+                        }
                     }
                 }
 
@@ -91,101 +105,29 @@ header {
             .menu_icons {
                 display: flex;
                 justify-content: start;
-                gap: 2rem;
+                gap: 1rem;
                 z-index: 1;
                 button {
                     border: none;
                     background: none;
+                    padding: 5px;
 
                     &:last-child {
                         display: block;
+
+                        &.open .fa-bars::before{
+                            content: "\f00d";
+                        }
                     }
+                    
                 }
             }
         }
     }
 
-    section {
-        display: flex;
-        position: relative;
-        justify-content: space-between;
-        top: 229px;
-        width: calc(100% - 10%);
-        margin: auto;
-        article {
-            display: block;
 
-            h1 {
-                color: $white;
-                line-height: 78px;
-                font-size: 65px;
-                font-weight: 200;
-
-                b {
-                    padding-left: 20px;
-                    text-decoration: underline;
-                    color: $white;
-                }
-            }
-        }
-
-        .imgs {
-            display: grid;
-            grid-template: 200px 200px / 1fr 1fr;
-            .img {
-                background-size: cover;
-                background-position: center;
-                filter: drop-shadow(20px 38px 66px rgba(0, 0, 0, 0.48));
-                border-radius: 65px;
-                width: 282px;
-                height: 282px;
-                position: absolute;
-                &.img1 {
-                    background-image: url(/assets/imgs/cursos_online.jpg);
-                    position: absolute;
-                    right: 0;
-                    top: -85px;
-                }
-                &.img2 {
-                    background-image: url(/assets/imgs/cursos_online2.jpg);
-                    right: 6rem;
-                    top: 7rem;
-                }
-                &.img3 {
-                    background-image: url(/assets/imgs/cursos_online3.jpg);
-                    width: 159px;
-                    height: 159px;
-                    right: 17rem;
-                }
-            }
-        }
-    }
 }
 
-@media screen and (max-width: 500px) {
-    header {
-        section {
-            
-            .imgs {
-                .img {
-                    border-radius: 20px;
-                    width: 140px;
-                    height: 140px;
-
-                    &.img2 {
-                        right: 7rem;
-                    }
-                    &.img3 {
-                        width: 100px;
-                        height: 100px;
-                        right: 13rem;
-                        top: 30px;
-                    }
-                }
-            }
-        }
-    }
-}
 
 @media (min-width: 768px) {
     header {
@@ -200,6 +142,11 @@ header {
                         top: 0;
                         left: 0;
                         width: auto;
+                        &.bg-scroll {
+                            background: none;
+                            box-shadow: none;
+                            top: 0;
+                        }
                     }
                 }
 
@@ -212,26 +159,7 @@ header {
                 }
             }
         }
+
     }
 }
 
-@media (min-width: 1100px) {
-    header {
-        section {
-            article {
-            }
-            .imgs {
-                .img {
-                    width: 200px;
-                    height: 200px;
-
-                    &.img1 {
-                        width: 200px;
-                        height: 200px;
-                        right: 20rem;
-                    }
-                }
-            }
-        }
-    }
-}

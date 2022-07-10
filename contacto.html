@@ -1,0 +1,105 @@
+<style>
+    .subcrib-card {
+        width: 100%;
+        height: 450px;
+        background: #eee;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        margin-bottom: 4rem;
+    }
+
+ 
+
+    .contacto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        position: absolute;
+        background: linear-gradient(175deg, #0e1a2f 10.79%, #f50f57 89.69%);
+        color: #fff;
+        
+        padding: 2rem;
+        width: 330px;
+        top: 30px;
+        text-align: center;
+    }
+
+    .contacto .form-group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 0.5rem;
+        color: #fff;
+    }
+
+    .form-group label {
+        color: #fff;
+    }
+
+    .form-group input {
+        border-radius: 5px;
+        width: 100%;
+        color: #6c757d;
+        padding: 10px 10px;
+        border: none;
+        outline: none;
+    }
+
+    .contacto .btn-contacto {
+        width: auto;
+    text-align: center;
+    background: #1a2d4d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    }
+
+    @media (min-width:500px) {
+        .subcrib-card{
+            justify-content: end;
+            margin-bottom: 2rem;
+        }
+        .contacto{
+            margin-right: 2rem;
+        }
+    }
+
+    @media (min-width:800px){
+        .subcrib-card{
+            height: 100vh;
+        }
+
+        .subcrib-card img{
+            display: block;
+        }
+
+        .contacto{
+            width: 40%;
+            max-width: 400px;
+            margin-right: 5%;
+            top: 5rem;
+        }
+    }
+</style>
+
+<div class="subcrib-card">
+    <img class="img-contacto" src="./assets/imgs/contacto.png" alt="contacto">
+
+    <form class="contacto" autocomplete="off">
+        <h2 class="title-contacto">mantente conectado</h2>
+        <p class="description">inscríbete para obtener noticias y descuentos de nuestros cursos y servicios</p>
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="example@gmail.com" required>
+        </div>
+        <button type="submit" class="btn btn-contacto">Enviar</button>
+    </form>
+</div>

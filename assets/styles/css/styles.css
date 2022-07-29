@@ -73,6 +73,18 @@ header {
               color: #ffff; }
             header nav .contenedor ul .items li:hover {
               background: #00000099; }
+            header nav .contenedor ul .items li.info {
+              display: none;
+              position: absolute;
+              background: #6c757d;
+              color: #1A2D4D;
+              top: 110px; }
+            header nav .contenedor ul .items li:nth-child(2) {
+              cursor: help; }
+              header nav .contenedor ul .items li:nth-child(2):hover ~ .info {
+                display: block; }
+              header nav .contenedor ul .items li:nth-child(2) a {
+                cursor: help; }
         header nav .contenedor ul .is_active {
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
       header nav .contenedor .menu_icons {
@@ -88,6 +100,8 @@ header {
             display: block; }
             header nav .contenedor .menu_icons button:last-child.open .fa-bars::before {
               content: "\f00d"; }
+          header nav .contenedor .menu_icons button.search i, header nav .contenedor .menu_icons button.user i {
+            cursor: no-drop; }
 
 @media (min-width: 768px) {
   header nav .contenedor ul .items {
@@ -102,6 +116,9 @@ header {
       background: none;
       box-shadow: none;
       top: 0; }
+    header nav .contenedor ul .items li.info {
+      left: 4.2rem;
+      top: 30px; }
   header nav .contenedor .menu_icons button:last-child {
     display: none; } }
 main {

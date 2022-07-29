@@ -81,18 +81,38 @@ header {
 
                     &.bg-scroll {
                         // background: $scroll;
-                        top:42px;
+                        top: 42px;
                         background: linear-gradient(111deg, #0e1a2f 1.79%, #f50f57 102.69%);
                         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
                     }
-                    li{
+
+                    li {
                         padding: 5px;
                         border-radius: 5px;
-                        a{
+                        a {
                             color: $white;
+
                         }
-                        &:hover{
+                        &:hover {
                             background: $gb_hover;
+                        }
+                        &.info {
+                            display: none;
+                            position: absolute;
+                            background: $text;
+                            color: $primary;
+                            top: 110px;
+                            // left: 4.2rem;
+                        }
+                        &:nth-child(2) {
+                            cursor:help;
+
+                            &:hover ~ .info {
+                                display: block;
+                            }
+                            a{
+                                cursor:help;
+                            }
                         }
                     }
                 }
@@ -115,19 +135,18 @@ header {
                     &:last-child {
                         display: block;
 
-                        &.open .fa-bars::before{
+                        &.open .fa-bars::before {
                             content: "\f00d";
                         }
                     }
-                    
+                    &.search i, &.user i{
+                        cursor: no-drop;
+                    }
                 }
             }
         }
     }
-
-
 }
-
 
 @media (min-width: 768px) {
     header {
@@ -147,6 +166,11 @@ header {
                             box-shadow: none;
                             top: 0;
                         }
+
+                        li.info{
+                            left: 4.2rem;
+                            top: 30px;
+                        }
                     }
                 }
 
@@ -159,7 +183,5 @@ header {
                 }
             }
         }
-
     }
 }
-
